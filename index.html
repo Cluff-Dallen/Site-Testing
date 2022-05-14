@@ -16,26 +16,8 @@
         <a href="#">Home</a>
         <a href="#">Roadmap</a>
         <a href="#">Features</a>
-        <a href="#" id="data">Data</a>
+        <a href="#" id="data">Dataa</a>
 
-        <div id="demo">
-          <h1>The XMLHttpRequest Object</h1>
-          <button type="button" onclick="loadDoc()">Change Content</button>
-          </div>
-          
-          <script>
-            function loadDoc() {
-              var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                  document.getElementById("demo").innerHTML =
-                  this.responseText;
-                }
-              };
-              xhttp.open("GET", "ajax_info.txt", true);
-              xhttp.send();
-            }
-            </script>
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
           var settings = {
