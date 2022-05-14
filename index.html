@@ -28,11 +28,15 @@
           targetUrl = "api-mainnet.magiceden.dev/v2/collections/degods/stats"
 
           fetch(proxyURL + targetUrl)
-            .then(response => response.text())
-            .then(result => console.log(result))
+            .then(response => {
+              response.text()
+              console.log("Response..")
+             })
+            .then(result => {
+              console.log(result)
+              console.log("Result..")
+             })
             .catch(error => console.log('error', error));
-            console.log("Let's start here")
-            console.log(result)
             console.log("Let's end here")
         </script>
       </nav>
