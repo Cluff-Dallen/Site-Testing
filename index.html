@@ -16,20 +16,21 @@
         <a href="#">Home</a>
         <a href="#">Roadmap</a>
         <a href="#">Features</a>
-        <a href="#" id="data">Dataaa</a>
+        <a href="#" id="data">Data</a>
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
-          var settings = {
-            "url": "api-mainnet.magiceden.dev/v2/collections/degods/stats",
-            "method": "GET",
-            "timeout": 0,
+          var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
           };
 
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });
-          document.getElementById("data").innerHTML = response;
+          fetch("api-devnet.magiceden.dev/v2/collections/degods/stats", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+          document.getElementById("data").innerHTML = "Hello JavaScript!";
         </script>
       </nav>
     </div>
